@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* img{
-    backdrop-filter: drop-shadow(2px 2px 2px black) ;
-} */
+img{
+    border-radius: 30px;
+}
 .buttons{
     display: grid;
     grid-template-columns: 50px 50px 50px; 
@@ -16,13 +16,30 @@
     margin: 10px 10px 0px 0px;
     border: 0;
 }
+:root{
+    --p1:linear-gradient(rgb(27, 31, 29),rgb(19, 20, 19));
+    --p2:rgb(124, 255, 2);
+    --p3:linear-gradient(to bottom right,green,yellow);
+    --p4:white;
+    --p5:black;
+    --p6:darkgray
+}
 .dark-mode{
-    background-color: linear-gradient(rgb(27, 31, 29),rgb(19, 20, 19));
+    --p1:linear-gradient(rgb(23, 23, 23),rgb(16, 28, 138));
+    --p2:rgb(25, 18, 213);
+    --p3:linear-gradient(to bottom ,rgb(10, 7, 66),rgb(0, 0, 0));
+    --p4:black;
+    --p5:rgb(113, 196, 113);
+    --p6:rgb(41, 38, 38);
 }
 #dar{
-    background: transparent;
+    /* background: transparent; */
     border: none;
     cursor: pointer;
+    /* outline: none; */
+    box-shadow: none;
+    width: 40px;
+    background: transparent;
 }
 input{
     border: none;
@@ -31,27 +48,29 @@ input{
     border-radius: 10px;
     font-size: 20px;
     margin-top: 10px;
-    box-shadow: inset 3px 3px 5px darkgray;
+    box-shadow: inset 3px 3px 5px var(--p6);
 }
 .input{
-    background: linear-gradient(rgb(16, 49, 31),rgb(15, 57, 15));
+    background: var(--p1);
     border-radius: 20px;
     padding: 20px 20px;
 }
 
 button{
+    background-color: var(--p4);
+    color: var(--p5);
     height: 30px;
     border-radius: 10px ;
     width: 50px;
     font-weight: 900;
-    box-shadow: inset -4px -1px 5px darkgray;
+    box-shadow: inset -4px -1px 5px var(--p6);
 }
 #i1{
     text-align: end;
 }
 #b2{
     width: 170px;
-    background-color: rgb(124, 255, 2);
+    background-color: var(--p2);
     box-shadow: none;
     font-size: 17px;
 }
@@ -60,12 +79,12 @@ button{
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    height: 100vh;
+    height: 94vh;
     /* background: linear-gradient(grey,green); */
 }
 body{
     /* background-color:color-mix(in srgb, blue 50%, green 50%); */
-    background:linear-gradient(to bottom right,green,yellow);
+    background:var(--p3);
     background-repeat: no-repeat;
     background-size: cover;
 }

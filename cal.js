@@ -27,10 +27,14 @@ function del() {
     result.value=result.value.slice(0,-1)
 }
 var dar=document.getElementById("dar");
+var moon=document.getElementById("moon");
 function modeChange() {
     // let calculator=document.getElementByClassName("calculator");
     document.body.classList.toggle("dark-mode");
     if (document.body.classList.contains("dark-mode")) {
-        dar.src="images/images.png" 
+        moon.src="sun-icon-31.png" 
+    }
+    else{
+        moon.src="moon.png" 
     }
 }
